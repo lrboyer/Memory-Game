@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import ReactDOM, { render } from "react-dom";
 
-function Square({ value, squareColor, onClick}) {
+function Square({ value, onClick}) {
+    const [color, setColor] = useState('white');
+    function changeColor() {
+        setColor('red');
+    }
+
   return (
-    <button className="square" style={{background:{squareColor}}} onClick={onClick}>
+        <button className="square" style={{background:color}} onClick={() => {onClick(); changeColor()}}>
       {value}
     </button>
   );
@@ -11,13 +16,11 @@ function Square({ value, squareColor, onClick}) {
 
 function GameBoard() {
   const [squares, setSquares] = useState(Array(9).fill(null));
-  const [color, setColor] = useState('white');
 
   function renderSquare(i) {
     return (
       <Square
         value={squares[i]} 
-        squareColor={setColor('red')}
         onClick={() => {
           if (squares[i] != null) {
             return;
