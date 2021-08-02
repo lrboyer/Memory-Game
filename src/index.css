@@ -59,3 +59,9 @@ color: #424242;
 margin-top: 20px;
 text-align: center;
 }
+
+.Next {
+    font-size: 50px;
+    height: 100px;
+    width: 200px;
+}

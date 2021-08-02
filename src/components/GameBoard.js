@@ -26,7 +26,7 @@ function GameBoard() {
             return;
           }
           const nextSquares = squares.slice();
-          nextSquares[i] = 1;
+          nextSquares[i] = i;
           setSquares(nextSquares);
         }}
       />
@@ -55,7 +55,17 @@ function GameBoard() {
         </div>
       </div>
     </div>
+    
+    
   );
 }
+/*
+function sequence() {
+  changeColor();
+}
 
+function checkInput() {
+
+}
+*/
 export default GameBoard;
