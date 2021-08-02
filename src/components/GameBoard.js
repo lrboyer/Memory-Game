@@ -9,7 +9,7 @@ function Square({ value, onClick}) {
 
   return (
         <button className="square" style={{background:color}} onClick={() => {onClick(); changeColor()}}>
-      {value}
+      
     </button>
   );
 }
